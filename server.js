@@ -1,5 +1,5 @@
 const express = require('express')
-// const ejs = require("ejs")
+const ejs = require("ejs")
 const app =  express()
 const server = require('http').Server(app)
 const io =require('socket.io')(server)
@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.get("/", (req, res) => {
    res.redirect(`/${uuid()}`)
 })
-app.get("/:room", (req, res) => {
+app.get("/:index", (req, res) => {
 
    res.render('room', {roomId: req.params.room })
 })
