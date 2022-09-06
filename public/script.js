@@ -11,7 +11,7 @@ const myVideo = document = document.createElement('video')
 const peering = {}
 myVideo.muted = true
 navigator.mediaDevices.getUserMedia({
-    video: false,
+    video: true,
     audio: true
 }).then(stream => {
    addVideoStream(myVideo, stream)
