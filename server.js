@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.get("/", (req, res) => {
    res.redirect(`/${uuid()}`)
 })
-app.get("/:index", (req, res) => {
+app.get("/:room", (req, res) => {
 
    res.render('room', {roomId: req.params.room })
 })
