@@ -5,13 +5,13 @@ const myPeer = new Peer(undefined, {
     host: '/',
     port: '3001'
 })
-console.log(myPeer)
+
 
 const myVideo = document = document.createElement('video')
 const peering = {}
 myVideo.muted = true
 navigator.mediaDevices.getUserMedia({
-    video: true,
+    video: true ,
     audio: true
 }).then(stream => {
    addVideoStream(myVideo, stream)
